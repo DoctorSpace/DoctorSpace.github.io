@@ -1,0 +1,33 @@
+.store__container-posts-card{
+    display: grid;
+    grid-template-columns: repeat(5, minmax(20px, auto));
+
+    gap:20px;
+    justify-content: space-between;
+}
+
+@media (max-width: 1600px) {
+    .store__container-posts-card{
+        grid-template-columns: repeat(4, minmax(10px, auto));
+        gap:10px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .store__container-posts-card{
+        grid-template-columns: repeat(3, minmax(10px, auto));
+        gap:10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .store__container-posts-card{
+        grid-template-columns: repeat(2, minmax(10px, auto));
+    }
+
+    @media (max-width: 600px) {
+        .store__container-posts-card{
+            grid-template-columns: repeat(1, minmax(10px, auto));
+        }
+    }
+}

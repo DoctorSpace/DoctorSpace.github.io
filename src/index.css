@@ -1,0 +1,35 @@
+/* App */
+@import url("./components/App/App.css");
+/* Fonts */
+@import url("./vendor/fonts.css");
+
+
+/* Components */
+/* Header */
+@import url("./components/Header/Header.css");
+/* FirstPage */
+@import url("./components/FirstPage/FirstPage.css");
+/* StorePage */
+@import url("./components/StorePage/StorePage.css");
+/* StoreCard */
+@import url("./components/StoreCard/StoreCard.css");
+/* Card */
+@import url("./components/Card/Card.css");
+/* Footer */
+@import url("./components/Footer/Footer.css");
+
+/* Authorization */
+@import url("./components/AuthorizationPage/AuthorizationPage.css");
+/* HeaderZero */
+@import url("./components/HeaderZero/HeaderZero.css");
+
+
+/* UI */
+/* HorizontalRule */
+@import url("./components/UI/HorizontalRule/HorizontalRule.css");
+/* ModalWindow */
+@import url("./components/UI/ModalWindow/ModalWindow.css");
+/* ViewWindow */
+@import url("./components/UI/ViewWindow/ViewWindow.css");
+/* ViewImg */
+@import url("./components/UI/ViewImg/ViewImg.css");

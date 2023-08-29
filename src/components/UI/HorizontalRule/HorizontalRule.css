@@ -1,0 +1,12 @@
+.HorizontalRule{
+    display: flex;
+    justify-content: center;
+}
+
+.HorizontalRule__line{
+    width: 1200px;
+    height: 1px;
+
+    border-radius: 50%;
+    background-color: var(--second);
+}
