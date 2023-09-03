@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import MainPage from '../MainPage/MainPage';
 import AuthorizationPage from '../AuthorizationPage/AuthorizationPage'
-import ViewWindow from '../UI/ViewWindow/ViewWindow';
+import ContactPage from '../ContactPage/ContactPage';
 
 function App() {
 
@@ -14,6 +14,7 @@ function App() {
         <Route path='/' element={<MainPage />} />
         <Route path='/Authorization' element={<AuthorizationPage />} />
         <Route path='*' element={<MainPage />} />
+        <Route path='/Contact' element={<ContactPage />} />
       </Routes>
     </div>
   );

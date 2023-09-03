@@ -41,7 +41,7 @@ const Header = () => {
             <header>
                 <div className='header__number'>
                     <img src={Phone} alt="phone" />
-                    <p>8 900 800 40 50</p>
+                    <p>8 961 404 14 62</p>
                 </div>
 
 
@@ -69,7 +69,7 @@ const Header = () => {
                             <nav>
                                 <a href="#Store" onClick={ToogleChange}><li>Товары</li></a>
                                 <a href="#" onClick={ToogleChange}><li>Доставка</li></a>
-                                <a href="#" onClick={ToogleChange}><li>Контакты</li></a>
+                                <Link to="/Contact" onClick={ToogleChange}><li>Контакты</li></Link>
                                 <Link to={isAuth ? '/' : '/Authorization'}><li onClick={isAuth ? sign0Out : null}> <img src={isAuth ? PersonExit : PersonEnter} alt="Person" /></li> </Link>
                             </nav>
                         </div>

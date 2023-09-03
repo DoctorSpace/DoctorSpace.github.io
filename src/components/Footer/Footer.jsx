@@ -17,11 +17,11 @@ const Footer = () => {
             <div className='Footer__contact'>
                 <div className='Footer__contact-phone'>
                     <img src={Phone} alt='phone'/>
-                    <p>7 999 800 50 40</p>
+                    <a href='tel:+79998887766'><p>+7(961)404 14-62</p></a>
                 </div>
                 <div className='Footer__contact-messengers'>
-                    <a href="#"><img src={WhatsApp} className='Footer__contact-messengers-icon' alt='WhatsApp'/></a>
-                    <a href="#"><img src={Instagram} onClick={sayHello} className='Footer__contact-messengers-icon' alt='Instagram'/></a>
+                    <a href="https://wa.me/79614041462"><img src={WhatsApp} target="_blank" className='Footer__contact-messengers-icon' alt='WhatsApp'/></a>
+                    <a href="https://www.instagram.com/isadora_visage/"><img src={Instagram} target="_blank" onClick={sayHello} className='Footer__contact-messengers-icon' alt='Instagram'/></a>
                 </div>
             </div>
         </footer>

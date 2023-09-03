@@ -151,10 +151,6 @@ const StorePage = () => {
                 <div className={`${openFilter ? 'store__container-categories' : 'store__container-categories-close'}`}>
                     <p>Украшения для тела</p>
                     <div>
-                        <input type="checkbox"  onChange={categoryPosts} className="custom-checkbox" id="bracelets" name="bracelets" value="браслеты" />
-                        <label for="bracelets">браслеты</label>
-                    </div>
-                    <div>
                         <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="necklace" name="necklace" value="колье" />
                         <label for="necklace">колье</label>
                     </div>
@@ -163,12 +159,43 @@ const StorePage = () => {
                         <label for="earrings">серьги</label>
                     </div>
                     <div>
-                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="rings" name="rings" value="кольца" />
-                        <label for="rings">кольца</label>
+                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="Belts" name="Belts" value="пояса" />
+                        <label for="Belts">пояса</label>
                     </div>
                     <div>
-                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="any" name="any" value="другое" />
-                        <label for="any">другое</label>
+                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="Tiaras" name="Tiaras" value="диадемы" />
+                        <label for="Tiaras">диадемы</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="Handkerchief" name="Handkerchief" value="платок" />
+                        <label for="Handkerchief">платок</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="Logos" name="Logos" value="логотип" />
+                        <label for="Logos">логотип</label>
+                    </div>
+
+                    <br></br>
+                    <p>Браслеты</p>
+                    <div>
+                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="SoftBracelet" name="SoftBracelet" value="браслет мягкий" />
+                        <label for="SoftBracelet">мягкие</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="HardBracelet" name="HardBracelet" value="браслет жетский" />
+                        <label for="HardBracelet">жетские</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="FeltBracelet" name="FeltBracelet" value="браслет фетровый" />
+                        <label for="FeltBracelet">фетровые</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="BraceletOnTheArm" name="BraceletOnTheArm" value="браслет треугольный" />
+                        <label for="BraceletOnTheArm">треугольный</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="BraceletOnTheLeg" name="BraceletOnTheLeg" value="браслет на ногу" />
+                        <label for="BraceletOnTheLeg">на ногу</label>
                     </div>
 
                     {isAuth ? <button onClick={addCard} className='store__container-btnAddCard'>Добавить Товар</button> : null}

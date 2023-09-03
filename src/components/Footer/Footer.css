@@ -33,14 +33,22 @@ footer {
 }
 
 .Footer__contact-phone{
-    font-size: 24px;
+    font-size: 20px;
     display: flex;
     flex-direction: row;
     align-self: center;
     align-items: center;
     gap: 12px;
     justify-self: end;
+    color: black;
+    text-decoration: none;
 }
+.Footer__contact-phone a{
+    color: black;
+    text-decoration: none;
+}
+
+
 
 .Footer__contact-messengers{
     display: flex;
