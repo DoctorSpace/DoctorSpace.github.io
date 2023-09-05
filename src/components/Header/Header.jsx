@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Routes, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Phone from '../../images/Phone.svg';
 import PersonEnter from '../../images/PersonEnter.svg';
 import PersonExit from '../../images/PersonExit.svg';
@@ -41,7 +41,7 @@ const Header = () => {
             <header>
                 <div className='header__number'>
                     <img src={Phone} alt="phone" />
-                    <p>8 961 404 14 62</p>
+                    <a href='tel:+79998887766'><p>+7 (961) 404 14-62</p></a>
                 </div>
 
 
@@ -68,7 +68,7 @@ const Header = () => {
                         <div className='nav-wrapper'>
                             <nav>
                                 <a href="#Store" onClick={ToogleChange}><li>Товары</li></a>
-                                <a href="#" onClick={ToogleChange}><li>Доставка</li></a>
+                                <Link to="/Contact" onClick={ToogleChange}><li>Доставка</li></Link>
                                 <Link to="/Contact" onClick={ToogleChange}><li>Контакты</li></Link>
                                 <Link to={isAuth ? '/' : '/Authorization'}><li onClick={isAuth ? sign0Out : null}> <img src={isAuth ? PersonExit : PersonEnter} alt="Person" /></li> </Link>
                             </nav>

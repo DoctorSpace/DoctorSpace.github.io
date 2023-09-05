@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ViewImg = ({visible, setVisible, data }) => {
 
@@ -14,15 +15,14 @@ const ViewImg = ({visible, setVisible, data }) => {
             <div className='ViewImg__content' onClick={(e)=> e.stopPropagation()}>
 
                     <div id='dropFile' for="image_uploads" className='ViewImg__content-img'>
-                        <img src={data.url_img}/>
+                        <img src={data.url_img} alt="something"/>
                     </div>
 
                     <button className='ViewImg__content-buttonClose' onClick={()=> setVisible(false)}>←</button>
 
                     <p>{data.title}</p>
 
-                    <button className='ViewImg__content-button'>Связаться</button>
-
+                    <Link to="/Contact" className='ViewImg__content-button'>Связаться</Link>
              </div>
         </div>
     );

@@ -1,13 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Photo1 from '../../images/Photo1.jpg';
 import Photo2 from '../../images/Photo2.jpg';
 
 const FirstPage = () => {
-
-    const addNewPost = () =>{
-        console.log('hi');
-    }
-
     return (
         <div className='FirstPag'>
             <h1>Аксессуары ручной работы</h1>
@@ -16,8 +12,8 @@ const FirstPage = () => {
 
                     <div className='FirstPage__main-text'>
                         <div className='FirstPage__main-text-p'>
-                            <p1>Наш магазин предлагает разнообразные аксессуары, которые помогут вам совершенствовать свои танцевальные навыки и придать вашим выступлениям изысканность.</p1>
-                            <p1>Здесь вы найдете множество колец, браслетов и многое другое – все, что нужно, чтобы сделать ваш танец восхитительным и элегантным.</p1>
+                            <p1>Добро пожаловать в мир восточных танцев и элегантных аксессуаров! Наш магазин - это место, где таинственная красота Востока соединяется с пышными движениями и страстью танца.</p1>
+                            <p1>Здесь вы найдете множество браслетов, поясов и многое другое – все, что нужно, чтобы сделать ваш танец восхитительным и элегантным.</p1>
                         </div>
                     </div>
                 </div>
@@ -29,8 +25,8 @@ const FirstPage = () => {
             </div>
 
             <div className='FirstPage__main-btn'>
-                <button className='Btn-main' onClick={addNewPost}>Посмотреть товары</button>
-                <button className='Btn-second' onClick={addNewPost}>Связаться</button>
+                <a href='#Store' className='Btn-main'>Посмотреть товары</a>
+                <Link to="/Contact" className='Btn-second'>Связаться</Link>
             </div>
 
         </div>
