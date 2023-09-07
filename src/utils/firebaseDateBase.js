@@ -1,4 +1,4 @@
-import { getDatabase, ref, set, child, get } from "firebase/database";
+import { getDatabase, ref, set} from "firebase/database";
 
 export const writeCardData = (cardId, title, category, imageUrl, price) => {
 
@@ -11,7 +11,3 @@ export const writeCardData = (cardId, title, category, imageUrl, price) => {
         price: price,
     });
 }
-
-// Добавить функцию считывания данных одной карточки
-
-// Добавить функцию считывания данных Всех карточек

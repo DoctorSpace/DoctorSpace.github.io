@@ -8,12 +8,10 @@ const Card = (props) => {
         <div className='card'>
 
             <img src={props.post.url_img} onClick={() => props.openView(props.post)} alt='print'/>
-
             
             <div className={props.post.price? 'card-price': 'card-price none'}>
                 <p>{props.post.price}Р</p>
             </div>
-
 
             {props.isAuth ? 
             <div className='card-settings'>

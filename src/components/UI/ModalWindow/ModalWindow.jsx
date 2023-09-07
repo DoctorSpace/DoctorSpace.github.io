@@ -5,8 +5,6 @@ import { getStorage,  uploadBytes, ref , getDownloadURL} from "firebase/storage"
 
 
 
-
-
 const ModalWindow = ({visible, setVisible, posts, create}) => {
 
 
@@ -76,7 +74,7 @@ const ModalWindow = ({visible, setVisible, posts, create}) => {
             getPictureUrl
             .then((date)=>{
                 imageUrl = date
-                axios.post('/posts',{
+                axios.post('/api/posts',{
                     "title": title,
                     "category": category,
                     "price": price,
@@ -130,11 +128,18 @@ const ModalWindow = ({visible, setVisible, posts, create}) => {
                             <p>Категория:</p>
                             <input ref={takeCategory} value={visible ? null : ''} type="text" list="item"></input>
                             <datalist id="item">
-                            	<option value="браслеты"></option>
-                            	<option value="колье"></option>
+                            <option value="колье"></option>
                             	<option value="серьги"></option>
-                            	<option value="кольца"></option>
-                                <option value="другое"></option>
+                            	<option value="пояса"></option>
+                            	<option value="диадемы"></option>
+                                <option value="платок"></option>
+                                <option value="логотип"></option>
+                                <p>Браслеты</p>
+                            	<option value="мягкие"></option>
+                            	<option value="жетские"></option>
+                            	<option value="фетровые"></option>
+                                <option value="треугольный"></option>
+                                <option value="на ногу"></option>
                             </datalist>
                         </div>
 

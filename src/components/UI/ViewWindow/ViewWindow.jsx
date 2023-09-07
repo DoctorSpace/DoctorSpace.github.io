@@ -23,14 +23,14 @@ const ViewWindow = ({visible, setVisible, data, update}) => {
         let newCategory = (takeCategory.current.value   !== takeCategory.current.placeholder  && takeCategory.current.value ? takeCategory.current.value : data.category )
         let newPrice    = (takePrice.current.value      !== takePrice.current.placeholder     && takePrice.current.value ? takePrice.current.value    : data.price   )
 
-        axios.patch(`/posts/${data._id}`,{
+        axios.patch(`/api/posts/${data._id}`,{
             "title": newTitle,
             "category": newCategory,
             "price": newPrice,
             "url_img": data.url_img
         })
         .then(data =>{
-            axios.get('/posts')
+            axios.get('/api/posts')
                 .then(data =>{
                     update(data.data)
                     setVisible(false)
@@ -45,10 +45,10 @@ const ViewWindow = ({visible, setVisible, data, update}) => {
     function deleteCardInfo(e){
         e.preventDefault();
 
-        axios.delete(`/posts/${data._id}`)
+        axios.delete(`/api/posts/${data._id}`)
         .then(data =>{
 
-            axios.get('/posts')
+            axios.get('/api/posts')
                 .then(data =>{
                     update(data.data)
                     setVisible(false)
@@ -95,11 +95,17 @@ const ViewWindow = ({visible, setVisible, data, update}) => {
                             <p>Категория:</p>
                             <input ref={takeCategory} value={visible ? null : ''} placeholder={data.category}  type="text" list="item"></input>
                             <datalist id="item">
-                            	<option value="браслеты"></option>
                             	<option value="колье"></option>
                             	<option value="серьги"></option>
-                            	<option value="кольца"></option>
-                                <option value="другое"></option>
+                            	<option value="пояса"></option>
+                            	<option value="диадемы"></option>
+                                <option value="платок"></option>
+                                <option value="логотип"></option>
+                            	<option value="мягкие"></option>
+                            	<option value="жетские"></option>
+                            	<option value="фетровые"></option>
+                                <option value="треугольный"></option>
+                                <option value="на ногу"></option>
                             </datalist>
                         </div>
 

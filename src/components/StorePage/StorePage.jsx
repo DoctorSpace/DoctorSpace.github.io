@@ -1,4 +1,4 @@
-import React, {useState, useEffect, createContext, useContext  } from 'react';
+import React, {useState, useEffect } from 'react';
 import StoreCard from '../StoreCard/StoreCard';
 import { useAuth } from '../../hooks/useAuth';
 import ModalWindow from '../UI/ModalWindow/ModalWindow';
@@ -77,7 +77,6 @@ const StorePage = () => {
 
 
 
-
     // Сортировка 
     const sortPosts = (selectorValue) => {
         setFilter(selectorValue)
@@ -102,7 +101,7 @@ const StorePage = () => {
     // Получение данных с сервера
     useEffect(()=>{
 
-        axios.get('/posts/', {
+        axios.get('/api/posts/', {
             params:{
                 '_limit': limit,
                 '_page': 1,

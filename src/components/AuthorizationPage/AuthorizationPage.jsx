@@ -1,8 +1,8 @@
-import React, { useState, useRef } from 'react';
-import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import React, { useState } from 'react';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import HeaderZero from '../HeaderZero/HeaderZero';
 import HorizontalRule from '../UI/HorizontalRule/HorizontalRule';
-import { setUserAuth, removeUserAuth } from '../../store/slices/userSlice';
+import { setUserAuth } from '../../store/slices/userSlice';
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import axios from '../../axios';
@@ -26,6 +26,7 @@ const AuthorizationPage = () => {
         }));
     };
 
+
     const Authorization = (e) =>{
         e.preventDefault();
         // Google
@@ -41,7 +42,7 @@ const AuthorizationPage = () => {
                 }))
 
 
-                axios.patch(`/token/64edd86fc7bfb004831a87cc`,{
+                axios.patch(`/api/token/64edd86fc7bfb004831a87cc`,{
                 	"token": userDate.user.accessToken
                 })
                     .then(res =>{

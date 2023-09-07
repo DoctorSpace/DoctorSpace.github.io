@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import FirstPage from '../FirstPage/FirstPage';
 import Header from '../Header/Header';
 import StorePage from '../StorePage/StorePage';

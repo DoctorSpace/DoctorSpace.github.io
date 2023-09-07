@@ -1,10 +1,7 @@
 import React from 'react';
 import Card from '../Card/Card';
-import { useAuth } from '../../hooks/useAuth';
 
 const StoreCard = ({posts, openSettings, openView, isAuth}) => {
-
-
     return (
         <div className='store__container-posts-card'>
             {posts.map((post) =>
