@@ -101,11 +101,12 @@ const ViewWindow = ({visible, setVisible, data, update}) => {
                             	<option value="диадемы"></option>
                                 <option value="платок"></option>
                                 <option value="логотип"></option>
-                            	<option value="мягкие"></option>
-                            	<option value="жетские"></option>
-                            	<option value="фетровые"></option>
-                                <option value="треугольный"></option>
-                                <option value="на ногу"></option>
+                                {/* браслет */}
+                                <option value="браслет мягкий"></option>
+                            	<option value="браслет жетский"></option>
+                            	<option value="браслет фетровый"></option>
+                                <option value="браслет треугольный"></option>
+                                <option value="браслет на ногу"></option>
                             </datalist>
                         </div>
 
