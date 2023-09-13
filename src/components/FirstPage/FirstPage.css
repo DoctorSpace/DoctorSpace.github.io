@@ -254,12 +254,11 @@
         font-size: 26px;
     }
 
-    .FirstPage{
-        gap: 40px;
-
-        grid-template-columns: 1fr;
-        grid-template-rows: 380px 120px;
-    }
+.FirstPage {
+    gap: 40px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr;
+}
 
     .FirstPage__img img{
         max-width: 160px;
