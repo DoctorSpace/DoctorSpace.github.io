@@ -11,10 +11,7 @@ footer {
 }
 
 .Footer__logo{
-    font-weight: 200;
-
     justify-self: start;
-    font-size: 38px;
 }
 
 .Footer__logo a{
@@ -22,7 +19,9 @@ footer {
     color: black;
 }
 
-
+.Footer__logo img{
+    width: 18vh;
+}
 
 
 .Footer__contact{
@@ -64,9 +63,6 @@ footer {
 }
 
 @media (max-width: 800px) {
-    .Footer__logo{
-        font-size: 24px;
-    }
 
     .Footer__contact-phone{
         font-size: 14px;
@@ -84,8 +80,8 @@ footer {
         gap: 20px;
     }
 
-    .Footer__logo{
-        font-size: 20px;
+    .Footer__logo img{
+        width: 18vh;
     }
 
     .Footer__contact-phone{
@@ -95,6 +91,13 @@ footer {
     .Footer__contact img{
         width: 18px;
         height: 18px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .Footer__logo img{
+        width: 14vh;
     }
 }
 

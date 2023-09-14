@@ -2,12 +2,13 @@ import React from 'react';
 import Phone from '../../images/Phone.svg';
 import WhatsApp from '../../images/WhatsApp.svg';
 import Instagram from '../../images/Instagram.svg';
+import FooterLogo from '../../images/FooterLogo.png';
 
 const Footer = () => {
     return (
         <footer>
             <div className='Footer__logo'>
-                <a href="#LogoName"><p>Айседора</p></a>
+                <a href="#LogoName"><img src={FooterLogo} alt='FooterLogo'/></a>
             </div>
             <div className='Footer__contact'>
                 <div className='Footer__contact-phone'>

@@ -15,7 +15,7 @@
     font-family: 'Exo2';
     font-weight: 300;
 
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .FirstPag h1{
@@ -254,11 +254,10 @@
         font-size: 26px;
     }
 
-    .FirstPage{
+    .FirstPage {
         gap: 40px;
-
         grid-template-columns: 1fr;
-        grid-template-rows: 380px 120px;
+        grid-template-rows: 1fr 0.3fr;
     }
 
     .FirstPage__img img{

@@ -30,6 +30,8 @@ const StorePage = () => {
     const [limit, setLimit] = useState(10)
     const [page, setPage] = useState(1)
 
+    const [firstLoad, setFirstLoad]  = useState(false)
+
     const {isAuth} = useAuth();
 
 
@@ -97,6 +99,19 @@ const StorePage = () => {
         }
     }
 
+    // Рандомайзер
+
+    // const shuffle = (arr) => {
+    //     for (let i = arr.length - 1; i> 0; i--){
+    //         let tmp = arr[i]
+    //         let rnd = Math.floor(Math.random() * (i + 1))
+
+    //         arr[i] = arr[rnd]
+    //         arr[rnd] =tmp
+    //     }
+    //     return arr;
+    // }
+
 
     // Получение данных с сервера
     useEffect(()=>{
@@ -113,6 +128,16 @@ const StorePage = () => {
 
                 // Количество страниц
                 //const countPage = response.headers['x-total-count']
+
+                // Для перетасовки карточек
+                // if (!firstLoad){
+                //     for (let i = 0; i < response.data.length; i++){
+                //         console.log('kurwa')
+                //         console.log(shuffle(response.data).join(','))
+                //     }
+                //     setFirstLoad(true)
+                // }
+
                 setPosts(response.data)
             })
             .catch(err =>{

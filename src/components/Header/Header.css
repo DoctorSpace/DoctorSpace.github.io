@@ -82,8 +82,8 @@ a li{
   
 .hamburger div {
   display:none;
-  width: 3em;
-  height: 7px;
+  width: 2em;
+  height: 4px;
   border-radius: 3px;
   background-color: black;
   margin-top: 8px;
@@ -131,7 +131,7 @@ Animations
 }
 #toggle:checked + .hamburger .meat {
   transform: rotate(45deg);
-  margin-top: -7px;
+  margin-top: -4px;
 }
 
 
@@ -212,18 +212,15 @@ Animations
 
 @media (max-width: 900px) {
 
-
-  .header__name h1 {
-    font-size: 24px;
-  }
-
-  .header__name p {
-    font-size: 12px;
-  }
-
   .header__number{
     opacity: 0%;
   }
+}
 
 
+@media (max-width: 500px) {
+  .header__name img {
+    width: 200px;
+    height: 52px;
+  }
 }

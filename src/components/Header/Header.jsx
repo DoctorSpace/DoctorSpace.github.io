@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom'
 import Phone from '../../images/Phone.svg';
+import Logo from '../../images/Logo.png';
 import PersonEnter from '../../images/PersonEnter.svg';
 import PersonExit from '../../images/PersonExit.svg';
 import { useAuth } from '../../hooks/useAuth';
@@ -47,8 +48,7 @@ const Header = () => {
 
                 <Link to='/' style={{ textDecoration: 'none' , color: 'black'}}>
                     <div className='header__name' id='LogoName'>
-                        <h1>Айседора</h1>
-                        <p>Интернет магазин для восточных танцев</p>
+                        <img src={Logo} alt="Logo" />
                     </div>
                 </Link>
 
