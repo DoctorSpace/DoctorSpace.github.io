@@ -100,6 +100,7 @@ const ViewWindow = ({visible, setVisible, data, update}) => {
                             	<option value="пояса"></option>
                             	<option value="диадемы"></option>
                                 <option value="платок"></option>
+                                <option value="чопперы"></option>
                                 <option value="логотип"></option>
                                 {/* браслет */}
                                 <option value="браслет мягкий"></option>
