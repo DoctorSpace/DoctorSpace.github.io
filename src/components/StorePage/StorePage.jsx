@@ -196,6 +196,10 @@ const StorePage = () => {
                     </div>
                     <div>
                         <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="Logos" name="Logos" value="логотип" />
+                        <label for="Logos">чопперы</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="Logos" name="Logos" value="логотип" />
                         <label for="Logos">логотип</label>
                     </div>
 
