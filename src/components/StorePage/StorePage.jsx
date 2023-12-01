@@ -156,8 +156,8 @@ const StorePage = () => {
             <div className='store__filter'>
                 <button type="button" onClick={OpenCloseFilter}>{openFilter? 'закрыть' : 'Категории'}</button>
                 
-                <div>
-                    <Selector
+                {/* <div> */}
+                    {/* <Selector
                         className='store__filter-selector'
                         defaultValue='Сортировка'
                         value={filter}
@@ -166,13 +166,25 @@ const StorePage = () => {
                           {value: 'priceUp',    name: 'по возрастанию'},
                           {value: 'priceDown',  name: 'по убыванию'}
                         ]}
-                    />
-                </div>
+                    /> */}
+                {/* </div> */}
             </div>
 
             <div className={`${openFilter ? 'store__container' : 'store__container-close'}`}>
 
                 <div className={`${openFilter ? 'store__container-categories' : 'store__container-categories-close'}`}>
+
+                    <p>Изделия для головы</p>    
+                    <div>
+                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="Tiaras" name="Tiaras" value="диадемы" />
+                        <label for="Tiaras">диадемы</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="hairDecoration" name="hairDecoration" value="украшение на волосы" />
+                        <label for="hairDecoration">украшение на волосы</label>
+                    </div>
+
+                    <br></br>
                     <p>Украшения для тела</p>
                     <div>
                         <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="necklace" name="necklace" value="колье" />
@@ -187,16 +199,12 @@ const StorePage = () => {
                         <label for="Belts">пояса</label>
                     </div>
                     <div>
-                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="Tiaras" name="Tiaras" value="диадемы" />
-                        <label for="Tiaras">диадемы</label>
-                    </div>
-                    <div>
                         <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="Handkerchief" name="Handkerchief" value="платок" />
                         <label for="Handkerchief">платок</label>
                     </div>
                     <div>
-                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="Chopper" name="Chopper" value="чопперы" />
-                        <label for="Chopper">чопперы</label>
+                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="Chopper" name="Chopper" value="чокеры" />
+                        <label for="Chopper">чокеры</label>
                     </div>
                     <div>
                         <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="Logos" name="Logos" value="логотип" />
@@ -210,8 +218,8 @@ const StorePage = () => {
                         <label for="SoftBracelet">мягкие</label>
                     </div>
                     <div>
-                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="HardBracelet" name="HardBracelet" value="браслет жетский" />
-                        <label for="HardBracelet">жетские</label>
+                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="HardBracelet" name="HardBracelet" value="браслет жесткий" />
+                        <label for="HardBracelet">жесткие</label>
                     </div>
                     <div>
                         <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="FeltBracelet" name="FeltBracelet" value="браслет фетровый" />

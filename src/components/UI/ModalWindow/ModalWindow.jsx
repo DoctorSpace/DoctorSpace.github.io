@@ -128,16 +128,20 @@ const ModalWindow = ({visible, setVisible, posts, create}) => {
                             <p>Категория:</p>
                             <input ref={takeCategory} value={visible ? null : ''} type="text" list="item"></input>
                             <datalist id="item">
-                            <option value="колье"></option>
+                                {/* Изделия для головы */}
+                                <option value="диадемы"></option>
+                                <option value="украшение на волосы"></option>
+
+                                {/* Украшения для тела */}
+                                <option value="колье"></option>
                             	<option value="серьги"></option>
                             	<option value="пояса"></option>
-                            	<option value="диадемы"></option>
                                 <option value="платок"></option>
-                                <option value="чопперы"></option>
+                                <option value="чокеры"></option>
                                 <option value="логотип"></option>
                                 {/* браслет */}
                             	<option value="браслет мягкий"></option>
-                            	<option value="браслет жетский"></option>
+                            	<option value="браслет жесткий"></option>
                             	<option value="браслет фетровый"></option>
                                 <option value="браслет треугольный"></option>
                                 <option value="браслет на ногу"></option>

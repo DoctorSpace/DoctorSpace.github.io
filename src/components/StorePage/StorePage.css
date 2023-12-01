@@ -53,7 +53,7 @@ select{
 
 .store__container{
     display:grid;
-    grid-template-columns: 160px 1fr;
+    grid-template-columns: 180px 1fr;
     gap: 20px;
 }
 
@@ -83,7 +83,10 @@ select{
 }
 
 .custom-checkbox{
-    accent-color: var(--second)
+    accent-color: var(--second);
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
 }
 
 
@@ -100,7 +103,11 @@ select{
 }
 
 .store__container-categories div{
-    margin-bottom: 8px;
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 12px;
     margin-left: 8px;
     margin-right: 10px;
 }
