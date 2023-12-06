@@ -9,6 +9,8 @@ import { getAuth, signOut } from "firebase/auth";
 import { useDispatch } from 'react-redux'
 import { removeUserAuth } from '../../store/slices/userSlice';
 import { useNavigate } from 'react-router-dom';
+import WhatsApp from '../../images/WhatsApp.svg';
+import Instagram from '../../images/Instagram.svg';
 
 const Header = () => {
 
@@ -40,9 +42,8 @@ const Header = () => {
 
     return (
             <header>
-                <div className='header__number'>
-                    <img src={Phone} alt="phone" />
-                    <a href='tel:+79998887766'><p>+7 (961) 404 14-62</p></a>
+                <div className='header__contact-messengers'>
+                    {/* <a target="_blank" rel="noreferrer" href="https://wa.me/79614041462"><img src={WhatsApp} className='Footer__contact-messengers-icon' alt='WhatsApp'/></a> */}
                 </div>
 
 
