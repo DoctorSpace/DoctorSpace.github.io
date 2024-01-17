@@ -22,6 +22,8 @@ const AuthorizationPage = () => {
         const { name, value } = e.target;
         setUser(prevUser => ({
             ...prevUser,
+
+            
             [name]: value
         }));
     };
@@ -50,7 +52,6 @@ const AuthorizationPage = () => {
                         navigate('/');
                     })
                     .catch(err =>{
-                        console.log('сюда');
                         console.log(err)
                     })
 

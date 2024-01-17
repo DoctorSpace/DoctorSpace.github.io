@@ -1,0 +1,36 @@
+.AddedPiost{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.AddedPiost button{
+    width: 400px;
+    height: 42px;
+}
+
+.AddedPiost__url-img input{
+    height: 24px;
+    width: 80vw;
+    margin-top: 40px;
+}
+
+.AddedPiost__url-img input{
+    height: 24px;
+    width: 80vw;
+}
+
+.AddedPiost__Numder {
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    display: flex;
+    gap:20px;
+}
+
+.AddedPiost__Numder input{
+    height: 24px;
+    width: 10vw;
+}
+

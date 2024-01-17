@@ -22,9 +22,10 @@
 @import url("./components/AuthorizationPage/AuthorizationPage.css");
 /* HeaderZero */
 @import url("./components/HeaderZero/HeaderZero.css");
-
 /* ContactPage */
 @import url("./components/ContactPage/ContactPage.css");
+/* AddedPiost */
+@import url("./components/AddedPiost/AddedPiost.css");
 
 
 /* UI */

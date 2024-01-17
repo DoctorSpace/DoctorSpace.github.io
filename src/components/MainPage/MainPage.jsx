@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import StorePage from '../StorePage/StorePage';
 import HorizontalRule from '../UI/HorizontalRule/HorizontalRule';
 import Footer from '../Footer/Footer';
+import AddedPiost from '../AddedPiost/AddedPiost';
 
 
 const MainPage = () => {
@@ -13,6 +14,7 @@ const MainPage = () => {
             <Header />
             <HorizontalRule />
             <FirstPage />
+            <AddedPiost />
             <StorePage />
             <HorizontalRule />
             <Footer />

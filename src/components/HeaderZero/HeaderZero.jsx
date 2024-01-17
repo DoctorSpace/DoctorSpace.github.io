@@ -11,7 +11,11 @@ const HeaderZero = () => {
             <Link to='/' style={{ textDecoration: 'none' , color: 'black'}}>
                 <div className='header__name' id='LogoName'>
                     <img src={Logo} alt="Logo" />
+
                 </div>
+
+                
+                
             </Link>
         </header>
     );

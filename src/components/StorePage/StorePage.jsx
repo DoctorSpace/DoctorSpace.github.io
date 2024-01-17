@@ -195,6 +195,10 @@ const StorePage = () => {
                         <label for="Handkerchief">платок</label>
                     </div>
                     <div>
+                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="Chopper" name="Handkerchief" value="чокеры" />
+                        <label for="Chopper">чокер</label>
+                    </div>
+                    <div>
                         <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="Logos" name="Logos" value="логотип" />
                         <label for="Logos">логотип</label>
                     </div>
@@ -206,8 +210,8 @@ const StorePage = () => {
                         <label for="SoftBracelet">мягкие</label>
                     </div>
                     <div>
-                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="HardBracelet" name="HardBracelet" value="браслет жетский" />
-                        <label for="HardBracelet">жетские</label>
+                        <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="HardBracelet" name="HardBracelet" value="браслет жесткий" />
+                        <label for="HardBracelet">жесткие</label>
                     </div>
                     <div>
                         <input type="checkbox" onChange={categoryPosts} className="custom-checkbox" id="FeltBracelet" name="FeltBracelet" value="браслет фетровый" />
