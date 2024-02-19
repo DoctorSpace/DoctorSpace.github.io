@@ -23,13 +23,14 @@ const ContactPage = () => {
 
           <div className="Contact__write">
             <p>Напиши нам</p>
-            <div className="Contact__write-messangers">
+            <div itemscope className="Contact__write-messangers">
               <a
                 target="_blank"
                 rel="noreferrer"
                 href="https://wa.me/79614041462"
               >
                 <img
+                  itemprop="image"
                   src={WhatsApp}
                   className="Contact__write-messangers-icon"
                   alt="WhatsApp"
@@ -41,6 +42,7 @@ const ContactPage = () => {
                 href="https://www.instagram.com/isadora_visage/"
               >
                 <img
+                  itemprop="image"
                   src={Instagram}
                   className="Contact__write-messangers-icon"
                   alt="Instagram"
