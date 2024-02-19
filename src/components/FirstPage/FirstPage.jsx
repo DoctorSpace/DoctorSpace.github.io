@@ -1,4 +1,5 @@
 import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { Link } from 'react-router-dom';
 import Photo1 from '../../images/Photo1.jpg';
 import Photo2 from '../../images/Photo2.jpg';
@@ -28,7 +29,7 @@ const FirstPage = () => {
                 <a href='#Store' className='Btn-main'>Посмотреть товары</a>
                 <Link to="/Contact" className='Btn-second'>Связаться</Link>
             </div>
-
+            <Analytics />
         </div>
     );
 };
