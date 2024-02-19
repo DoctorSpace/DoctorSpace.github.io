@@ -1,5 +1,0 @@
-User-agent: yandex
-disallow: /Authorization
-
-User-agent: googlebot
-disallow: /Authorization
