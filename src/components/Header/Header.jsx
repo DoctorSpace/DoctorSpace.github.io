@@ -1,50 +1,17 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import Phone from "../../images/Phone.svg";
 import Logo from "../../images/Logo.png";
-import PersonEnter from "../../images/PersonEnter.svg";
-import PersonExit from "../../images/PersonExit.svg";
-import { useAuth } from "../../hooks/useAuth";
-import { getAuth, signOut } from "firebase/auth";
-import { useDispatch } from "react-redux";
-import { removeUserAuth } from "../../store/slices/userSlice";
-import { useNavigate } from "react-router-dom";
-import WhatsApp from "../../images/WhatsApp.svg";
-import Instagram from "../../images/Instagram.svg";
 
 const Header = () => {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  const { isAuth } = useAuth();
   const [toogle, setToogle] = useState(false);
 
   const ToogleChange = () => {
     setToogle(!toogle);
   };
 
-  const sign0Out = () => {
-    let auth = getAuth();
-
-    signOut(auth)
-      .then(() => {
-        console.log("вышли");
-
-        dispatch(removeUserAuth());
-        navigate("/");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
-  //'header-vision'
-
   return (
     <header>
-      <div className="header__contact-messengers">
-        {/* <a target="_blank" rel="noreferrer" href="https://wa.me/79614041462"><img src={WhatsApp} className='Footer__contact-messengers-icon' alt='WhatsApp'/></a> */}
-      </div>
+      <div className="header__contact-messengers"></div>
 
       <Link to="/" style={{ textDecoration: "none", color: "black" }}>
         <div className="header__name" id="LogoName">
@@ -79,12 +46,6 @@ const Header = () => {
               </Link>
               <Link to="/Contact" onClick={ToogleChange}>
                 <li>Контакты</li>
-              </Link>
-              <Link to={isAuth ? "/" : "/Authorization"}>
-                <li onClick={isAuth ? sign0Out : null}>
-                  {" "}
-                  <img src={isAuth ? PersonExit : PersonEnter} alt="Person" />
-                </li>{" "}
               </Link>
             </nav>
           </div>

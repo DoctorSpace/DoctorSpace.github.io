@@ -1,31 +1,33 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-const ViewImg = ({visible, setVisible, data }) => {
+const ViewImg = ({ visible, closeView, data }) => {
+  if (!data) return;
 
-    const rootClasses = ['ViewImg']
+  const rootClasses = ["ViewImg"];
 
-    if (visible) {
-        rootClasses.push('active')
-    }
+  if (visible) {
+    rootClasses.push("active");
+  }
 
-
-    return (
-        <div className={rootClasses.join(' ')} onClick={()=> setVisible(false)}>
-            <div className='ViewImg__content' onClick={(e)=> e.stopPropagation()}>
-
-                    <div id='dropFile' for="image_uploads" className='ViewImg__content-img'>
-                        <img src={data.url_img} alt="something"/>
-                    </div>
-
-                    <button className='ViewImg__content-buttonClose' onClick={()=> setVisible(false)}>←</button>
-
-                    <p>{data.title}</p>
-
-                    <Link to="/Contact" className='ViewImg__content-button'>Связаться</Link>
-             </div>
+  return (
+    <div className={rootClasses.join(" ")} onClick={closeView}>
+      <div className="ViewImg__content" onClick={(e) => e.stopPropagation()}>
+        <div id="dropFile" for="image_uploads" className="ViewImg__content-img">
+          <img src={data?.image} alt="something" />
         </div>
-    );
+
+        <button className="ViewImg__content-buttonClose" onClick={closeView}>
+          ←
+        </button>
+
+        <p>{data?.name}</p>
+
+        <Link to="/Contact" className="ViewImg__content-button">
+          Связаться
+        </Link>
+      </div>
+    </div>
+  );
 };
 
 export default ViewImg;

@@ -3,6 +3,8 @@
   font-weight: 300;
 
   scroll-snap-align: start;
+
+  margin-bottom: 80px;
 }
 
 .store__filter {
@@ -64,8 +66,6 @@ select {
   gap: 20px;
 }
 
-/* categories */
-
 .store__container-categories-close {
   display: block;
 }
@@ -100,7 +100,6 @@ select {
 
 .store__container-categories div {
   display: flex;
-  align-items: center;
 
   margin-bottom: 12px;
   margin-left: 8px;
@@ -117,7 +116,7 @@ select {
   cursor: pointer;
 }
 
-.store__batton {
+.store__button {
   display: grid;
   justify-content: center;
 }
@@ -135,7 +134,6 @@ select {
   min-width: 244px;
 
   margin-top: 60px;
-  margin-bottom: 80px;
 }
 
 .store__container-btnAddCard {
