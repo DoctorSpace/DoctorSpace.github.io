@@ -3,12 +3,13 @@
 /* Fonts */
 @import url("./vendor/fonts.css");
 
-
 /* Components */
 /* Header */
 @import url("./components/Header/Header.css");
 /* FirstPage */
 @import url("./components/FirstPage/FirstPage.css");
+/* CategoryFilter */
+@import url("./components/CategoryFilter/CategoryFilter.css");
 /* StorePage */
 @import url("./components/StorePage/StorePage.css");
 /* StoreCard */
@@ -26,7 +27,6 @@
 @import url("./components/ContactPage/ContactPage.css");
 /* AddedPiost */
 @import url("./components/AddedPiost/AddedPiost.css");
-
 
 /* UI */
 /* HorizontalRule */

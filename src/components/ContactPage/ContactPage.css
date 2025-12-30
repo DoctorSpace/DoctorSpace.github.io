@@ -1,133 +1,126 @@
-.Contact{
-    display: flex;
-    font-family: 'Exo2';
-    font-weight: 300;
+.Contact {
+  display: flex;
+  font-family: "Exo2";
+  font-weight: 300;
 
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
-    height: 80vh;
+  height: 80vh;
 }
 
-.Contact__block{
-    display: flex;
-    flex-direction: column;
+.Contact__block {
+  display: flex;
+  flex-direction: column;
 
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 
-    height: 700px;
-    width: 60vw;
-    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.10);
-    border-radius: 10px;
+  height: 700px;
+  width: 60vw;
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
-.Contact__text{
-    font-size: 14px;
+.Contact__text {
+  font-size: 14px;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    width: 32vw;
-    gap: 10px;
+  width: 32vw;
+  gap: 10px;
 
-    margin-top: 60px;
-    text-align: center;
+  margin-top: 60px;
+  text-align: center;
 }
 
-.Contact__btn-phone{
-    margin-top: 80px;
+.Contact__btn-phone {
+  margin-top: 80px;
 
-    font-size: 18px;
+  font-size: 18px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    padding: 14px 0px;
-    width: 400px;
+  padding: 14px 0px;
+  width: 400px;
 
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
 
-    border-radius: 10px;
-    background: #FFD6BC;
+  border-radius: 10px;
+  background: #ffd6bc;
 }
 
-.Contact__btn-phone span{
-    font-size: 14px;
-    opacity: 60%;
+.Contact__btn-phone span {
+  font-size: 14px;
+  opacity: 60%;
 }
 
-
-.Contact__write{
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+.Contact__write {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
-.Contact__write-messangers{
-    display: flex;
-    gap: 40px;
+.Contact__write-messangers {
+  display: flex;
+  gap: 40px;
 }
 
-.Contact__write-messangers-icon{
-    width: 28px;
-    height: 28px;
+.Contact__write-messangers-icon {
+  width: 28px;
+  height: 28px;
 }
 
 @media (max-width: 1400px) {
-    .Contact__text{
-        font-size: 16px;
-        width: 60vw;
-    }
+  .Contact__text {
+    font-size: 16px;
+    width: 60vw;
+  }
 
-    .Contact__block{
-        width: 90vw;
-    }
+  .Contact__block {
+    width: 90vw;
+  }
 }
 
 @media (max-width: 800px) {
+  .Contact__block {
+    height: 70vh;
+    width: 90vw;
+  }
 
-    .Contact__block{
-        height: 70vh;
-        width: 90vw;
-    }
+  .Contact__text {
+    font-size: 16px;
+    width: 60vw;
+  }
 
-    .Contact__text{
-        font-size: 16px;
-        width: 60vw;
-    }
-
-    .Contact__btn-phone{
-        width: 80vw;
-    }
-
+  .Contact__btn-phone {
+    width: 80vw;
+  }
 }
 
 @media (max-width: 600px) {
+  .Contact h2 {
+    margin-top: 10px;
+  }
 
-    .Contact h2{
-        margin-top: 10px;
-    }
+  .Contact__text {
+    margin-top: 30px;
+    font-size: 14px;
+    width: 70vw;
+  }
 
-    .Contact__text{
-        margin-top: 30px;
-        font-size: 14px;
-        width: 70vw;
-    }
+  .Contact__btn-phone {
+    margin-top: 30px;
+  }
 
-    .Contact__btn-phone{
-        margin-top: 30px;
-    }
-
-    .Contact__write{
-        margin-top: 30px;
-    }
-
-
+  .Contact__write {
+    margin-top: 30px;
+  }
 }
-

@@ -1,20 +1,20 @@
-header{
-  font-family: 'Exo2';
+header {
+  font-family: "Exo2";
   font-weight: 300;
 
   display: grid;
   height: 110px;
-  
+
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.none{
-  display:none;
+.none {
+  display: none;
 }
 
-.header-vision{
-  position:fixed;
+.header-vision {
+  position: fixed;
   z-index: 999;
   top: 0;
   bottom: 0;
@@ -28,60 +28,58 @@ a {
   color: black;
 }
 
-
-.myModalContent{
+.myModalContent {
   padding: 25px;
   background-color: aliceblue;
   border-radius: 16px;
   min-width: 250px;
 }
 
-.MyModal.active{
+.MyModal.active {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.header__number{
-    display: flex;
-    gap: 12px;
+.header__number {
+  display: flex;
+  gap: 12px;
 }
 
-.header__name{
-    text-align: center;
+.header__name {
+  text-align: center;
 }
 
-h1{ 
-    font-family: 'Exo2';
-    font-weight: 400;
+h1 {
+  font-family: "Exo2";
+  font-weight: 400;
 }
 
-a li{
-    list-style: none;
+a li {
+  list-style: none;
 }
 
 #toggle {
-    display: none;
+  display: none;
 }
 
-.header__nav{
+.header__nav {
   align-self: center;
   justify-self: end;
 }
 
-  
 /**
   Hamburger
 **/
 
 .hamburger {
   cursor: pointer;
-  display:none;
+  display: none;
   z-index: 10;
 }
-  
+
 .hamburger div {
-  display:none;
+  display: none;
   width: 2em;
   height: 4px;
   border-radius: 3px;
@@ -101,7 +99,7 @@ nav {
   font-size: 14px;
   display: flex;
   justify-self: end;
-  gap: 40px
+  gap: 40px;
 }
 
 nav a {
@@ -113,9 +111,8 @@ nav a {
   transition: color 0.2s ease-in-out;
 }
 
-
 nav a:hover {
-    opacity: 80%;
+  opacity: 80%;
 }
 
 /**
@@ -134,28 +131,23 @@ Animations
   margin-top: -4px;
 }
 
-
-
 @media (max-width: 1740px) {
-
-  .nav{
+  .nav {
     display: block;
   }
 
-  nav{
+  nav {
     gap: 20px;
     display: flex;
   }
 }
 
-
 @media (max-width: 1540px) {
-
-  .nav{
+  .nav {
     display: block;
   }
 
-  nav{
+  nav {
     margin-top: 160px;
     display: flex;
 
@@ -165,16 +157,17 @@ Animations
     gap: 40px;
   }
 
-  .hamburger{
+  .hamburger {
     position: sticky;
   }
 
-  .hamburger, .hamburger div{
+  .hamburger,
+  .hamburger div {
     z-index: 8;
     display: block;
   }
 
-  nav li{
+  nav li {
     font-size: 20px;
     width: 240px;
     height: 60px;
@@ -200,23 +193,20 @@ Animations
     background-color: #ffffff;
   }
 
-  .hide{
+  .hide {
     display: none;
   }
 
-  header{
+  header {
     grid-template-columns: 0.6fr 1fr 0.6fr;
   }
 }
 
-
 @media (max-width: 900px) {
-
-  .header__number{
+  .header__number {
     opacity: 0%;
   }
 }
-
 
 @media (max-width: 500px) {
   .header__name img {

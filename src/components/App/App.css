@@ -2,13 +2,13 @@
   margin: 0;
 }
 
-.App{
+.App {
   margin-left: 180px;
   margin-right: 180px;
 }
 
 @media (max-width: 1400px) {
-  .App{
+  .App {
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -16,18 +16,18 @@
 
 body::-webkit-scrollbar {
   cursor: pointer;
-  width: 10px;                          /* ширина scrollbar */
+  width: 10px; /* ширина scrollbar */
 }
 body::-webkit-scrollbar-track {
-  background: var(--background);        /* цвет дорожки */
+  background: var(--background); /* цвет дорожки */
 }
 body::-webkit-scrollbar-thumb {
-  background-color: var(--second);      /* цвет плашки */
-  border-radius: 20px;                  /* закругления плашки */
-  border: 3px solid var(--background);  /* padding вокруг плашки */
+  background-color: var(--second); /* цвет плашки */
+  border-radius: 20px; /* закругления плашки */
+  border: 3px solid var(--background); /* padding вокруг плашки */
 }
 
 :root {
-  --background: #FFFFFF;
-  --second: #FFD6BC;
+  --background: #ffffff;
+  --second: #ffd6bc;
 }
