@@ -1,6 +1,9 @@
 import { memo } from "react";
 
 const StoreCard = ({ posts, openView }) => {
+
+  console.log(posts);
+
   return (
     <div className="StoreCards">
       {posts.map((post) => (
