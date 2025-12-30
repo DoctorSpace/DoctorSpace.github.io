@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 const StoreCard = ({ posts, openView }) => {
   return (
     <div className="StoreCards">
@@ -7,7 +9,7 @@ const StoreCard = ({ posts, openView }) => {
           key={post?.id}
           onClick={() => openView(post)}
         >
-          <img src={post?.image} alt={post?.name} />
+          <img src={post?.image} alt={post?.name} loading="lazy" />
 
           <p>{post?.name}</p>
         </div>
@@ -16,4 +18,4 @@ const StoreCard = ({ posts, openView }) => {
   );
 };
 
-export default StoreCard;
+export default memo(StoreCard);

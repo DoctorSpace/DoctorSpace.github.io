@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import ViewImg from "../UI/ViewImg/ViewImg";
 import StoreCard from "../StoreCard/StoreCard";
 import CategoryGroup from "../CategoryGroup/CategoryGroup";
@@ -12,8 +12,14 @@ const StorePage = () => {
 
   const [categories, setCategories] = useState([]);
   const [allPosts, setAllPosts] = useState([]);
-  const [visiblePosts, setVisiblePosts] = useState([]);
   const [limit, setLimit] = useState(20);
+
+  const visiblePosts = useMemo(() => {
+    const filtered = categories.length
+      ? allPosts.filter((post) => categories.includes(post.category))
+      : allPosts;
+    return filtered.slice(0, limit);
+  }, [allPosts, categories, limit]);
 
   const filteredPosts =
     categories.length > 0
@@ -25,32 +31,19 @@ const StorePage = () => {
     const shuffled = shuffleArray(PRODUCTS_ITEMS);
 
     setAllPosts(shuffled);
-    setVisiblePosts(shuffled.slice(0, limit));
     // eslint-disable-next-line
   }, []);
 
-  // Обновление видимых карточек при изменении лимита или фильтра
-  useEffect(() => {
-    let filtered = allPosts;
-
-    if (categories.length > 0) {
-      filtered = allPosts.filter((post) => categories.includes(post.category));
-    }
-
-    setVisiblePosts(filtered.slice(0, limit));
-  }, [allPosts, categories, limit]);
-
   // Проверка на отображение кнопки показать ещё
-  useEffect(() => {
-    setVisiblePosts(filteredPosts.slice(0, limit));
-  }, [filteredPosts, limit]);
+  useEffect(() => {}, [filteredPosts, limit]);
 
   const toggleFilter = () => setOpenFilter((prev) => !prev);
 
-  const openView = (post) => {
+  const openView = useCallback((post) => {
     setInfoPostView(post);
     setIsImgPostView(true);
-  };
+  }, []);
+
   const closeView = () => {
     setInfoPostView(null);
     setIsImgPostView(false);
