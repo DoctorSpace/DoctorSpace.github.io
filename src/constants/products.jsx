@@ -2,110 +2,81 @@ const CONTEXTS = {
   Belt: {
     title: "Пояс",
     category: "Belts",
-    context: require.context(
-      "../images/Products/Belt",
-      false,
-      /\.(jpg|jpeg|png|webp)$/
-    ),
+    prefix: "Belt",
+    path: "/images/Products/Belt",
+    count: 1,
   },
-
   Choker: {
     title: "Чокер",
     category: "Chokers",
-    context: require.context(
-      "../images/Products/Choker",
-      false,
-      /\.(jpg|jpeg|png|webp)$/
-    ),
+    prefix: "Choker",
+    path: "/images/Products/Choker",
+    count: 46,
   },
-
   Earring: {
     title: "Серьги",
     category: "Earrings",
-    context: require.context(
-      "../images/Products/Earring",
-      false,
-      /\.(jpg|jpeg|png|webp)$/
-    ),
+    prefix: "Earring",
+    path: "/images/Products/Earring",
+    count: 33,
   },
-
   FeltBracelet: {
     title: "Фетровый браслет",
     category: "FeltBracelets",
-    context: require.context(
-      "../images/Products/FeltBracelet",
-      false,
-      /\.(jpg|jpeg|png|webp)$/
-    ),
+    prefix: "FeltBracelet",
+    path: "/images/Products/FeltBracelet",
+    count: 31,
   },
-
   HairAccessory: {
     title: "Аксессуар для волос",
     category: "HairAccessorys",
-    context: require.context(
-      "../images/Products/HairAccessory",
-      false,
-      /\.(jpg|jpeg|png|webp)$/
-    ),
+    prefix: "HairAccessory",
+    path: "/images/Products/HairAccessory",
+    count: 23,
   },
-
   HardBracelet: {
     title: "Жёсткий браслет",
     category: "HardBracelets",
-    context: require.context(
-      "../images/Products/HardBracelet",
-      false,
-      /\.(jpg|jpeg|png|webp)$/
-    ),
+    prefix: "HardBracelet",
+    path: "/images/Products/HardBracelet",
+    count: 32,
   },
-
   Necklace: {
     title: "Колье",
     category: "Necklaces",
-    context: require.context(
-      "../images/Products/Necklace",
-      false,
-      /\.(jpg|jpeg|png|webp)$/
-    ),
+    prefix: "Necklace",
+    path: "/images/Products/Necklace",
+    count: 198,
   },
-
   Scarf: {
     title: "Платок",
     category: "Scarfs",
-    context: require.context(
-      "../images/Products/Scarf",
-      false,
-      /\.(jpg|jpeg|png|webp)$/
-    ),
+    prefix: "Scarf",
+    path: "/images/Products/Scarf",
+    count: 3,
   },
-
   SoftBracelet: {
     title: "Мягкий браслет",
     category: "SoftBracelets",
-    context: require.context(
-      "../images/Products/SoftBracelet",
-      false,
-      /\.(jpg|jpeg|png|webp)$/
-    ),
+    prefix: "SoftBracelet",
+    path: "/images/Products/SoftBracelet",
+    count: 12,
   },
-
   Tiadem: {
     title: "Диадема",
     category: "Tiadems",
-    context: require.context(
-      "../images/Products/Tiadem",
-      false,
-      /\.(jpg|jpeg|png|webp)$/
-    ),
+    prefix: "Tiadem",
+    path: "/images/Products/Tiadem",
+    count: 17,
   },
 };
 
 export const PRODUCTS_ITEMS = Object.entries(CONTEXTS).flatMap(
-  ([key, { category, title, context }]) =>
-    context.keys().map((file, index) => ({
+  ([key, { title, category, prefix, path, count }]) =>
+    Array.from({ length: count }, (_, index) => ({
       id: `${key}-${index + 1}`,
-      category: category,
+      category,
       name: `${title} ${index + 1}`,
-      image: context(file),
+      image: `${path}/${prefix}-${index + 1}.jpg`,
     }))
 );
