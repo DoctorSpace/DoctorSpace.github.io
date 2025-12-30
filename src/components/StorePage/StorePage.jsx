@@ -21,7 +21,6 @@ const StorePage = () => {
     return filtered.slice(0, limit);
   }, [allPosts, categories, limit]);
 
-  // Фильтрация
   const filteredPosts =
     categories.length > 0
       ? allPosts.filter((post) => categories.includes(post.category))
