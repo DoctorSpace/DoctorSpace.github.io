@@ -1,182 +1,176 @@
-.ViewImg{
-    position:fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    display: none;
-    background-color: rgba(0, 0, 0, 0.4);
+.ViewImg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.ViewImg.active{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.ViewImg.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.ViewImg__content p{
-    text-align: center;
+.ViewImg__content p {
+  text-align: center;
 
-    margin-bottom: 20px;
-    max-width: 80vw;
-    max-height: 60px;
+  margin-bottom: 20px;
+  max-width: 80vw;
+  max-height: 60px;
 }
 
+.ViewImg__content {
+  padding: 20px;
+  background-color: var(--background);
+  border-radius: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
+  min-width: 200px;
 
-.ViewImg__content{
-    padding: 20px;
-    background-color: var(--background);
-    border-radius: 10px;
-    padding-left: 60px;
-    padding-right: 60px;
-    min-width: 200px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
 
-    display: grid;
-    justify-content: center;
-    align-content: center;
+  position: relative;
 
-    position: relative;
-
-    gap: 20px;
+  gap: 20px;
 }
 
-.ViewImg__content h2{
-    margin: 0px;
-    font-size: 18px;
+.ViewImg__content h2 {
+  margin: 0px;
+  font-size: 18px;
 }
 
-.ViewImg__content-img{
-    max-height: 80vh;
-    max-width: 80vw;
+.ViewImg__content-img {
+  max-height: 80vh;
+  max-width: 80vw;
 
-    border-radius: 10px;
-    border: 1px dashed #FFD6BC;
-    background-color: var(--background);
+  border-radius: 10px;
+  border: 1px dashed #ffd6bc;
+  background-color: var(--background);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* padding: 20px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 20px; */
 
-    cursor: pointer;
-    justify-self: center;
-
+  cursor: pointer;
+  justify-self: center;
 }
 
-.ViewImg__content-img img{
-    height: auto;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    object-fit: cover;
+.ViewImg__content-img img {
+  height: auto;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  object-fit: cover;
 
-    max-height: 80vh;
-    max-width: 80vw;
+  max-height: 80vh;
+  max-width: 80vw;
 }
 
-.ViewImg__content-button{
+.ViewImg__content-button {
+  height: 42px;
+  border: 0px;
+  border-radius: 10px;
 
-    height: 42px;
-    border: 0px;
-    border-radius: 10px;
+  display: flex;
 
-    display: flex;
+  justify-content: center;
+  align-items: center;
 
-    justify-content: center;
-    align-items: center;
-
-    cursor: pointer;
-    background-color: var(--second);
-
+  cursor: pointer;
+  background-color: var(--second);
 }
 
-.ViewImg__content-buttonClose{
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    border: 0px;
+.ViewImg__content-buttonClose {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 0px;
 
-    cursor: pointer;
-    background-color: var(--second);
+  cursor: pointer;
+  background-color: var(--second);
 
-    position: absolute;
+  position: absolute;
 
-    left: 16px;
-    top: 16px;
+  left: 16px;
+  top: 16px;
 }
 
-.ViewImg__content-img-input{
-    position: relative;
-    z-index: -99;
-    height: 0px;
+.ViewImg__content-img-input {
+  position: relative;
+  z-index: -99;
+  height: 0px;
 }
 
+.ViewImg__content-divider {
+  width: 180px;
+  height: 1px;
+  background-color: var(--second);
 
-.ViewImg__content-divider{
-    width: 180px;
-    height: 1px;
-    background-color: var(--second);
-
-    justify-self: center;
+  justify-self: center;
 }
 
-.ViewImg__content form{
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+.ViewImg__content form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-.ViewImg__content form input{
-    border: 1px solid var(--second);
+.ViewImg__content form input {
+  border: 1px solid var(--second);
 
-    height: 28px;
-    border-radius: 6px;
-    padding-left: 10px;
+  height: 28px;
+  border-radius: 6px;
+  padding-left: 10px;
 
-    margin-top: 6px;
+  margin-top: 6px;
 
-    width: 300px;
+  width: 300px;
 }
 
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-#btnChangeCard{
-    cursor: pointer;
-    border: 0px;
-    background-color: var(--second);
+#btnChangeCard {
+  cursor: pointer;
+  border: 0px;
+  background-color: var(--second);
 
-    height: 42px;
-    border-radius: 6px;
-    padding-left: 10px;
+  height: 42px;
+  border-radius: 6px;
+  padding-left: 10px;
 }
 
-#btnDeleteCard{
-    cursor: pointer;
-    margin-top: 12px;
-    border: 1px solid var(--second);
-    background-color: var(--background);
+#btnDeleteCard {
+  cursor: pointer;
+  margin-top: 12px;
+  border: 1px solid var(--second);
+  background-color: var(--background);
 
-    height: 42px;
-    border-radius: 6px;
-    padding-left: 10px;
+  height: 42px;
+  border-radius: 6px;
+  padding-left: 10px;
 }
 
 @media (max-width: 800px) {
-    .ViewImg__content{
-        padding: 20px;
-        background-color: var(--background);
-        border-radius: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
-        min-width: 200px;
-        gap: 10px;
-    }
+  .ViewImg__content {
+    padding: 20px;
+    background-color: var(--background);
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-width: 200px;
+    gap: 10px;
+  }
 
-    .ViewImg__content-buttonClose{
-        left: 8px;
-        top: 8px;
-    }
-
+  .ViewImg__content-buttonClose {
+    left: 8px;
+    top: 8px;
+  }
 }

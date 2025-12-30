@@ -1,4 +1,3 @@
-import React from "react";
 import HeaderZero from "../HeaderZero/HeaderZero";
 import HorizontalRule from "../UI/HorizontalRule/HorizontalRule";
 import WhatsApp from "../../images/WhatsApp.svg";
