@@ -71,12 +71,17 @@ const CONTEXTS = {
   },
 };
 
+const pad = (num) => num.toString().padStart(2, "0");
+
 export const PRODUCTS_ITEMS = Object.entries(CONTEXTS).flatMap(
   ([key, { title, category, prefix, path, count }]) =>
-    Array.from({ length: count }, (_, index) => ({
-      id: `${key}-${index + 1}`,
-      category,
-      name: `${title} ${index + 1}`,
-      image: `${path}/${prefix}-${index + 1}.jpg`,
-    }))
+    Array.from({ length: count }, (_, index) => {
+      const num = pad(index + 1);
+      return {
+        id: `${key}-${num}`,
+        category,
+        name: `${title} ${num}`,
+        image: `${path}/${prefix}-${num}.jpg`,
+      };
+    })
 );
