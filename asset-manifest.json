@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/isadora-shop-frontend/static/css/main.7cdd7792.css",
-    "main.js": "/isadora-shop-frontend/static/js/main.98bafaa9.js",
+    "main.css": "/isadora-shop-frontend/static/css/main.5da1af2c.css",
+    "main.js": "/isadora-shop-frontend/static/js/main.979abf7b.js",
     "static/media/Photo2.jpg": "/isadora-shop-frontend/static/media/Photo2.915d66852cb6579543ea.jpg",
     "static/media/Photo1.jpg": "/isadora-shop-frontend/static/media/Photo1.4a2293c178a634a82766.jpg",
     "static/media/exo2_medium.otf": "/isadora-shop-frontend/static/media/exo2_medium.1766846914e1ebaaa727.otf",
@@ -13,11 +13,11 @@
     "index.html": "/isadora-shop-frontend/index.html",
     "static/media/Arrow.svg": "/isadora-shop-frontend/static/media/Arrow.7fcfdccda537f0b9c6ffb17b5ec4bbdd.svg",
     "static/media/Instagram.svg": "/isadora-shop-frontend/static/media/Instagram.45a070d7fa1610814daa1852c447f82a.svg",
-    "main.7cdd7792.css.map": "/isadora-shop-frontend/static/css/main.7cdd7792.css.map",
-    "main.98bafaa9.js.map": "/isadora-shop-frontend/static/js/main.98bafaa9.js.map"
+    "main.5da1af2c.css.map": "/isadora-shop-frontend/static/css/main.5da1af2c.css.map",
+    "main.979abf7b.js.map": "/isadora-shop-frontend/static/js/main.979abf7b.js.map"
   },
   "entrypoints": [
-    "static/css/main.7cdd7792.css",
-    "static/js/main.98bafaa9.js"
+    "static/css/main.5da1af2c.css",
+    "static/js/main.979abf7b.js"
   ]
 }
