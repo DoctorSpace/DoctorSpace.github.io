@@ -1,0 +1,104 @@
+footer {
+
+    font-family: 'Exo2';
+    font-weight: 300;
+
+    display: grid;
+
+    height: 100px;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+}
+
+.Footer__logo{
+    justify-self: start;
+}
+
+.Footer__logo a{
+    text-decoration: none;
+    color: black;
+}
+
+.Footer__logo img{
+    width: 18vh;
+}
+
+
+.Footer__contact{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-self: end;
+}
+
+.Footer__contact-phone{
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    gap: 12px;
+    justify-self: end;
+    color: black;
+    text-decoration: none;
+}
+.Footer__contact-phone a{
+    color: black;
+    text-decoration: none;
+}
+
+
+
+.Footer__contact-messengers{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    justify-self: end;
+}
+
+
+.Footer__contact-messengers-icon:hover{
+    cursor: pointer;
+    opacity: 80%;
+}
+
+@media (max-width: 800px) {
+
+    .Footer__contact-phone{
+        font-size: 14px;
+    }
+
+    .Footer__contact img{
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .Footer__contact{
+        gap: 20px;
+    }
+
+    .Footer__logo img{
+        width: 18vh;
+    }
+
+    .Footer__contact-phone{
+        font-size: 8px;
+    }
+
+    .Footer__contact img{
+        width: 18px;
+        height: 18px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .Footer__logo img{
+        width: 14vh;
+    }
+}
+
