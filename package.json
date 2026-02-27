@@ -2,7 +2,7 @@
   "name": "frontend",
   "private": true,
   "version": "0.1.0",
-  "homepage": "https://doctorspace.github.io/isadora-shop-frontend/",
+  "homepage": "https://doctorspace.github.io/",
   "type": "module",
   "scripts": {
     "dev": "vite",
