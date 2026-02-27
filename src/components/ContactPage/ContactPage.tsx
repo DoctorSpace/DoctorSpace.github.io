@@ -1,7 +1,7 @@
 import HeaderZero from "../HeaderZero/HeaderZero";
 import HorizontalRule from "../UI/HorizontalRule/HorizontalRule";
-import WhatsApp from "../../images/WhatsApp.svg";
-import Instagram from "../../images/Instagram.svg";
+import Phone from "../../images/Phone.svg";
+import PhotoCamera from "../../images/PhotoCamera.svg";
 
 const ContactPage = () => {
   return (
@@ -30,9 +30,9 @@ const ContactPage = () => {
               >
                 <img
                   itemProp="image"
-                  src={WhatsApp}
+                  src={Phone}
                   className="Contact__write-messangers-icon"
-                  alt="WhatsApp"
+                  alt="Phone"
                 />
               </a>
               <a
@@ -42,9 +42,9 @@ const ContactPage = () => {
               >
                 <img
                   itemProp="image"
-                  src={Instagram}
+                  src={PhotoCamera}
                   className="Contact__write-messangers-icon"
-                  alt="Instagram"
+                  alt="Photos"
                 />
               </a>
             </div>

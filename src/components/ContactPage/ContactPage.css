@@ -72,12 +72,22 @@
 
 .Contact__write-messangers{
     display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    /* background: #ff0000; */
     gap: 40px;
 }
 
 .Contact__write-messangers-icon{
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 1400px) {
