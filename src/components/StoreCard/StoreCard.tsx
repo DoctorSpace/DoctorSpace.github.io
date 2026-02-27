@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { Product } from "../../constants/products";
+import styles from "./StoreCard.module.scss";
 
 interface StoreCardProps {
   posts: Product[];
@@ -8,10 +9,10 @@ interface StoreCardProps {
 
 const StoreCard = memo(({ posts, openView }: StoreCardProps) => {
   return (
-    <div className="StoreCards">
+    <div className={styles.grid}>
       {posts.map((post) => (
         <div
-          className="StoreCards__item"
+          className={styles.card}
           key={post?.id}
           onClick={() => openView(post)}
         >

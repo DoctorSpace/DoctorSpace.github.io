@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Product } from "../../../constants/products";
+import styles from "./ViewImg.module.scss";
 
 interface ViewImgProps {
   visible: boolean;
@@ -10,26 +11,26 @@ interface ViewImgProps {
 const ViewImg = ({ visible, closeView, data }: ViewImgProps) => {
   if (!data) return null;
 
-  const rootClasses = ["ViewImg"];
+  const rootClasses = [styles.overlay];
 
   if (visible) {
-    rootClasses.push("active");
+    rootClasses.push(styles.active);
   }
 
   return (
     <div className={rootClasses.join(" ")} onClick={closeView}>
-      <div className="ViewImg__content" onClick={(e) => e.stopPropagation()}>
-        <div id="dropFile" className="ViewImg__content-img">
+      <div className={styles.content} onClick={(e) => e.stopPropagation()}>
+        <div id="dropFile" className={styles.imageBox}>
           <img src={data?.image} alt="something" />
         </div>
 
-        <button className="ViewImg__content-buttonClose" onClick={closeView}>
+        <button className={styles.closeButton} onClick={closeView}>
           ←
         </button>
 
         <p>{data?.name}</p>
 
-        <Link to="/Contact" className="ViewImg__content-button">
+        <Link to="/Contact" className={styles.actionButton}>
           Связаться
         </Link>
       </div>

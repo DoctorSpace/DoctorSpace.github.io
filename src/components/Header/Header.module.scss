@@ -1,94 +1,45 @@
-header {
+.header {
   font-family: "Exo2";
   font-weight: 300;
-
   display: grid;
   height: 110px;
-
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.header__contact-messengers {
+.contacts {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
   gap: 20px;
 }
 
-.header__contact-messengers img {
-  width: 32px;
-  height: 32px;
-}
-
-.none {
-  display: none;
-}
-
-.header-vision {
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-a {
+.logoLink {
   text-decoration: none;
   color: black;
 }
 
-.myModalContent {
-  padding: 25px;
-  background-color: aliceblue;
-  border-radius: 16px;
-  min-width: 250px;
-}
-
-.MyModal.active {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.header__number {
-  display: flex;
-  gap: 12px;
-}
-
-.header__name {
+.logo {
   text-align: center;
 }
 
-h1 {
-  font-family: "Exo2";
-  font-weight: 400;
-}
-
-a li {
-  list-style: none;
-}
-
-#toggle {
-  display: none;
-}
-
-.header__nav {
+.navigation {
   align-self: center;
   justify-self: end;
+  position: relative;
 }
 
-/**
-  Hamburger
-**/
+.hamburgerWrap {
+  position: relative;
+}
+
+.toggle {
+  display: none;
+}
 
 .hamburger {
   cursor: pointer;
   display: none;
-  z-index: 10;
+  z-index: 20;
 }
 
 .hamburger div {
@@ -101,86 +52,100 @@ a li {
   transition: all 0.3s ease-in-out;
 }
 
-/*  */
+.nav {
+  display: block;
+}
 
-.nav-wrapper {
+.navDesktop {
+  display: block;
+}
+
+.navOpen {
+  display: block;
+}
+
+.navClosed {
+  display: block;
+}
+
+.navWrapper {
   position: relative;
   height: 100%;
 }
 
-nav {
+.navList {
   font-size: 14px;
   display: flex;
   justify-self: end;
   gap: 40px;
 }
 
-nav a {
+.navLink {
   color: black;
-  position: relative;
   text-decoration: none;
   font-size: 16px;
   display: inline-block;
   transition: color 0.2s ease-in-out;
 }
 
-nav a:hover {
+.navLink li {
+  list-style: none;
+}
+
+.navLink:hover {
   opacity: 80%;
 }
 
-/**
-Animations
-**/
-#toggle:checked + .hamburger .top-bun {
+.toggle:checked + .hamburger .topBun {
   transform: rotate(-45deg);
   margin-top: 25px;
 }
-#toggle:checked + .hamburger .bottom-bun {
+
+.toggle:checked + .hamburger .bottomBun {
   opacity: 0;
   transform: rotate(45deg);
 }
-#toggle:checked + .hamburger .meat {
+
+.toggle:checked + .hamburger .meat {
   transform: rotate(45deg);
   margin-top: -4px;
 }
 
 @media (max-width: 1740px) {
-  .nav {
-    display: block;
-  }
-
-  nav {
+  .navList {
     gap: 20px;
-    display: flex;
   }
 }
 
 @media (max-width: 1540px) {
-  .nav {
-    display: block;
-  }
-
-  nav {
+  .navList {
+    width: 100%;
     margin-top: 160px;
-    display: flex;
-
     flex-direction: column;
     align-items: center;
-
     gap: 40px;
   }
 
   .hamburger {
-    position: sticky;
-  }
-
-  .hamburger,
-  .hamburger div {
-    z-index: 8;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 30;
     display: block;
   }
 
-  nav li {
+  .hamburger div {
+    display: block;
+  }
+
+  .navLink {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navLink li {
     font-size: 20px;
     width: 240px;
     height: 60px;
@@ -193,36 +158,41 @@ Animations
     background-color: var(--second);
   }
 
-  .nav-wrapper {
-    position: relative;
+  .navWrapper {
     text-align: center;
-    box-shadow: -4px 0px 10px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: -4px 0 10px 0 rgba(0, 0, 0, 0.15);
     position: fixed;
-    right: 0px;
-    top: 0px;
+    right: 0;
+    top: 0;
     width: 300px;
     height: 100%;
-    z-index: 5;
+    z-index: 10;
     background-color: #ffffff;
+    transform: translateX(100%);
+    transition: transform 0.25s ease-in-out;
   }
 
-  .hide {
-    display: none;
+  .navOpen .navWrapper {
+    transform: translateX(0);
   }
 
-  header {
+  .navClosed .navWrapper {
+    transform: translateX(100%);
+    pointer-events: none;
+  }
+
+  .navDesktop .navWrapper {
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  .header {
     grid-template-columns: 0.6fr 1fr 0.6fr;
   }
 }
 
-@media (max-width: 900px) {
-  .header__number {
-    opacity: 0%;
-  }
-}
-
 @media (max-width: 500px) {
-  .header__name img {
+  .logo img {
     width: 200px;
     height: 52px;
   }

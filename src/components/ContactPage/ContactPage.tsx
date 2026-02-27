@@ -2,16 +2,17 @@ import HeaderZero from "../HeaderZero/HeaderZero";
 import HorizontalRule from "../UI/HorizontalRule/HorizontalRule";
 import Phone from "../../images/Phone.svg";
 import PhotoCamera from "../../images/PhotoCamera.svg";
+import styles from "./ContactPage.module.scss";
 
 const ContactPage = () => {
   return (
     <div>
       <HeaderZero />
       <HorizontalRule />
-      <div className="Contact">
-        <div className="Contact__block">
+      <div className={styles.section}>
+        <div className={styles.card}>
           <h2>Контакты</h2>
-          <div className="Contact__text">
+          <div className={styles.text}>
             <p>
               Не стесняйтесь звонить нам, если у вас есть какие-либо вопросы,
               нужна консультация или вы хотели бы узнать больше о наших товарах
@@ -20,9 +21,9 @@ const ContactPage = () => {
             <p>Мы ценим вашу заинтересованность и ждем вашего сообщения</p>
           </div>
 
-          <div className="Contact__write">
+          <div className={styles.write}>
             <p>Напиши нам</p>
-            <div itemScope className="Contact__write-messangers">
+            <div itemScope className={styles.messengers}>
               <a
                 target="_blank"
                 rel="noreferrer"
@@ -31,7 +32,7 @@ const ContactPage = () => {
                 <img
                   itemProp="image"
                   src={Phone}
-                  className="Contact__write-messangers-icon"
+                  className={styles.icon}
                   alt="Phone"
                 />
               </a>
@@ -43,7 +44,7 @@ const ContactPage = () => {
                 <img
                   itemProp="image"
                   src={PhotoCamera}
-                  className="Contact__write-messangers-icon"
+                  className={styles.icon}
                   alt="Photos"
                 />
               </a>

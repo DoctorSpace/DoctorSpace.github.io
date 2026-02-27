@@ -1,7 +1,7 @@
+import styles from "./HorizontalRule.module.scss";
+
 const HorizontalRule = () => {
-    return (
-        <div className="HorizontalRule"></div>
-    );
+  return <div className={styles.rule}></div>;
 };
 
 export default HorizontalRule;

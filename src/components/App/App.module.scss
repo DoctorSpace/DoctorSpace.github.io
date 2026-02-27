@@ -1,0 +1,11 @@
+.app {
+  margin-left: 180px;
+  margin-right: 180px;
+}
+
+@media (max-width: 1400px) {
+  .app {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}

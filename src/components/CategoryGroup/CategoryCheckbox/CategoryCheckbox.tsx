@@ -1,3 +1,5 @@
+import styles from "./CategoryCheckbox.module.scss";
+
 export interface CategoryCheckboxProps {
   id: string;
   value: string;
@@ -6,15 +8,15 @@ export interface CategoryCheckboxProps {
 }
 
 export const CategoryCheckbox = ({ id, value, label, onChange }: CategoryCheckboxProps) => (
-  <div>
+  <div className={styles.row}>
     <input
       type="checkbox"
       id={id}
       name={id}
       value={value}
       onChange={onChange}
-      className="custom-checkbox"
+      className={styles.checkbox}
     />
-    <label htmlFor={id}>{label}</label>
+    <label htmlFor={id} className={styles.label}>{label}</label>
   </div>
 );
