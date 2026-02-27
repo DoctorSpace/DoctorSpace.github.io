@@ -1,0 +1,61 @@
+.footer {
+  font-family: "Exo2";
+  font-weight: 300;
+  display: grid;
+  height: 100px;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+}
+
+.logo {
+  justify-self: start;
+}
+
+.logo a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo img {
+  width: 18vh;
+}
+
+.contact {
+  display: flex;
+  gap: 40px;
+  justify-self: end;
+}
+
+.messengers {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-self: end;
+}
+
+.icon:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
+
+@media (max-width: 800px) {
+  .contact img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact {
+    gap: 20px;
+  }
+
+  .logo img {
+    width: 14vh;
+  }
+
+  .contact img {
+    width: 18px;
+    height: 18px;
+  }
+}

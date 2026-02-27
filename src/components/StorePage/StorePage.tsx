@@ -5,9 +5,10 @@ import CategoryGroup from "../CategoryGroup/CategoryGroup";
 import { PRODUCTS_ITEMS } from "../../constants/products";
 import { shuffleArray } from "../../utils/shuffleArray";
 import { Product } from "../../constants/products";
+import styles from "./StorePage.module.scss";
 
 const StorePage = () => {
-  const [openFilter, setOpenFilter] = useState(true);
+  const [openFilter, setOpenFilter] = useState(false);
   const [infoPostView, setInfoPostView] = useState<Product | null>(null);
   const [isImgPostView, setIsImgPostView] = useState(false);
 
@@ -57,23 +58,23 @@ const StorePage = () => {
   };
 
   return (
-    <div className="store">
+    <div className={styles.section}>
       <h2 id="Store">Товары</h2>
 
-      <div className="store__filter">
-        <button type="button" onClick={toggleFilter}>
+      <div className={styles.filter}>
+        <button type="button" onClick={toggleFilter} className={styles.filterButton}>
           {openFilter ? "закрыть" : "Категории"}
         </button>
       </div>
 
       <div
-        className={openFilter ? "store__container" : "store__container-close"}
+        className={openFilter ? styles.container : styles.containerCompact}
       >
         <div
           className={
             openFilter
-              ? "store__container-categories"
-              : "store__container-categories-close"
+              ? styles.categories
+              : styles.categoriesHidden
           }
         >
           <CategoryGroup onChange={handleCategoryChange} />
@@ -93,8 +94,8 @@ const StorePage = () => {
       />
 
       {visiblePosts.length < filteredPosts.length && (
-        <div className="store__button">
-          <button className="Btn-CardLoad" onClick={loadMore}>
+        <div className={styles.actions}>
+          <button className={styles.loadButton} onClick={loadMore}>
             Загрузить ещё
           </button>
         </div>

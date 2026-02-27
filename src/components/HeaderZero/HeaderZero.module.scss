@@ -1,0 +1,22 @@
+.header {
+  font-family: "Exo2";
+  font-weight: 300;
+  display: grid;
+  height: 110px;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 40px 1fr;
+}
+
+.backLink {
+  justify-self: start;
+}
+
+.logoLink {
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  text-align: center;
+}

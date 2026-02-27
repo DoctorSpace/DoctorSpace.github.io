@@ -1,0 +1,20 @@
+.row {
+  display: flex;
+  margin-bottom: 12px;
+  margin-left: 8px;
+  margin-right: 10px;
+}
+
+.checkbox {
+  accent-color: var(--second);
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.label {
+  font-size: 14px;
+  margin-left: 10px;
+  cursor: pointer;
+}
