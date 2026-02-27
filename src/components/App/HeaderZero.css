@@ -1,0 +1,21 @@
+header{
+    font-family: 'Exo2';
+    font-weight: 300;
+
+
+    display: grid;
+    height: 110px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.header__number{
+    display: flex;
+    gap: 12px;
+}
+
+.header__name{
+    text-decoration: none;
+    text-align: center;
+}
