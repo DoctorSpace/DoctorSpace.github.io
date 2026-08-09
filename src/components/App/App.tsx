@@ -1,4 +1,3 @@
-import { Analytics } from "@vercel/analytics/react";
 import { Routes, Route } from "react-router-dom";
 import MainPage from "../MainPage/MainPage";
 import ContactPage from "../ContactPage/ContactPage";
@@ -8,9 +7,7 @@ import styles from "./App.module.scss";
 function App() {
   return (
     <div className={styles.app}>
-      <Analytics />
       <Routes>
-        <Route path="/" element={<MainPage />} />
         <Route path="*" element={<MainPage />} />
         <Route path="/Contact" element={<ContactPage />} />
         <Route path="/yandex_2e9e41e634307037.html" element={<Yandex />} />

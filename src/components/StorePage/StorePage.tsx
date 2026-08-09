@@ -1,52 +1,25 @@
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState } from "react";
 import ViewImg from "../UI/ViewImg/ViewImg";
 import StoreCard from "../StoreCard/StoreCard";
 import CategoryGroup from "../CategoryGroup/CategoryGroup";
-import { PRODUCTS_ITEMS } from "../../constants/products";
+import { PRODUCTS_ITEMS, type Product } from "../../constants/products";
 import { shuffleArray } from "../../utils/shuffleArray";
-import { Product } from "../../constants/products";
 import styles from "./StorePage.module.scss";
 
 const StorePage = () => {
   const [openFilter, setOpenFilter] = useState(false);
   const [infoPostView, setInfoPostView] = useState<Product | null>(null);
-  const [isImgPostView, setIsImgPostView] = useState(false);
-
   const [categories, setCategories] = useState<string[]>([]);
-  const [allPosts, setAllPosts] = useState<Product[]>([]);
+  const [allPosts] = useState(() => shuffleArray(PRODUCTS_ITEMS));
   const [limit, setLimit] = useState(20);
 
-  const visiblePosts = useMemo(() => {
-    const filtered = categories.length
-      ? allPosts.filter((post) => categories.includes(post.category))
-      : allPosts;
-    return filtered.slice(0, limit);
-  }, [allPosts, categories, limit]);
-
-  const filteredPosts =
-    categories.length > 0
-      ? allPosts.filter((post) => categories.includes(post.category))
-      : allPosts;
-
-  useEffect(() => {
-    const shuffled = shuffleArray(PRODUCTS_ITEMS);
-    setAllPosts(shuffled);
-  }, []);
-
-  useEffect(() => {}, [filteredPosts, limit]);
+  const filteredPosts = categories.length
+    ? allPosts.filter((post) => categories.includes(post.category))
+    : allPosts;
+  const visiblePosts = filteredPosts.slice(0, limit);
 
   const toggleFilter = () => setOpenFilter((prev) => !prev);
-
-  const openView = useCallback((post: Product) => {
-    setInfoPostView(post);
-    setIsImgPostView(true);
-  }, []);
-
-  const closeView = () => {
-    setInfoPostView(null);
-    setIsImgPostView(false);
-  };
-
+  const closeView = () => setInfoPostView(null);
   const loadMore = () => setLimit((prev) => prev + 20);
 
   const handleCategoryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -62,7 +35,11 @@ const StorePage = () => {
       <h2 id="Store">Товары</h2>
 
       <div className={styles.filter}>
-        <button type="button" onClick={toggleFilter} className={styles.filterButton}>
+        <button
+          type="button"
+          onClick={toggleFilter}
+          className={styles.filterButton}
+        >
           {openFilter ? "закрыть" : "Категории"}
         </button>
       </div>
@@ -70,28 +47,18 @@ const StorePage = () => {
       <div
         className={openFilter ? styles.container : styles.containerCompact}
       >
-        <div
-          className={
-            openFilter
-              ? styles.categories
-              : styles.categoriesHidden
-          }
-        >
+        <div className={openFilter ? undefined : styles.categoriesHidden}>
           <CategoryGroup onChange={handleCategoryChange} />
         </div>
 
         {visiblePosts.length ? (
-          <StoreCard openView={openView} posts={visiblePosts} />
+          <StoreCard openView={setInfoPostView} posts={visiblePosts} />
         ) : (
           <div>Товары отсутствуют</div>
         )}
       </div>
 
-      <ViewImg
-        visible={isImgPostView}
-        closeView={closeView}
-        data={infoPostView}
-      />
+      <ViewImg closeView={closeView} data={infoPostView} />
 
       {visiblePosts.length < filteredPosts.length && (
         <div className={styles.actions}>

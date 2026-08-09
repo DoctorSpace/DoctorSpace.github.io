@@ -21,8 +21,6 @@
 }
 
 .contact {
-  display: flex;
-  gap: 40px;
   justify-self: end;
 }
 
@@ -30,7 +28,6 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  justify-self: end;
 }
 
 .icon:hover {
@@ -46,16 +43,7 @@
 }
 
 @media (max-width: 600px) {
-  .contact {
-    gap: 20px;
-  }
-
   .logo img {
     width: 14vh;
-  }
-
-  .contact img {
-    width: 18px;
-    height: 18px;
   }
 }

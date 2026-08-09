@@ -32,7 +32,6 @@
 @media (max-width: 1200px) {
   .grid {
     grid-template-columns: repeat(3, minmax(10px, auto));
-    gap: 10px;
   }
 }
 
