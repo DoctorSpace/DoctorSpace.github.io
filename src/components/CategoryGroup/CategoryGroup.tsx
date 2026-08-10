@@ -14,7 +14,7 @@ const CategoryGroup = ({ onChange }: CategoryGroupProps) => {
           <p className={styles.title}>{category.title}</p>
 
           {category.items.map((item) => (
-            <CategoryCheckbox key={item.id} {...item} onChange={onChange} />
+            <CategoryCheckbox key={item.value} {...item} onChange={onChange} />
           ))}
 
           <br />

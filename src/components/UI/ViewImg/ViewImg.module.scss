@@ -1,5 +1,6 @@
 .overlay {
   position: fixed;
+  z-index: 1000;
   top: 0;
   bottom: 0;
   right: 0;
@@ -34,25 +35,42 @@
 }
 
 .imageBox {
-  max-height: 80vh;
-  max-width: 80vw;
+  position: relative;
+  isolation: isolate;
+  width: min(80vw, 52.5vh);
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
   border-radius: 10px;
   border: 1px dashed #ffd6bc;
-  background-color: var(--background);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: linear-gradient(135deg, #fffaf6, #fcede3);
   cursor: pointer;
   justify-self: center;
 }
 
+.loader {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.loader :global(.iml-skeleton) {
+  inset: 0 !important;
+  border: 0;
+}
+
 .imageBox img {
-  height: auto;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  max-height: 80vh;
-  max-width: 80vw;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.imageLoading {
+  opacity: 0;
 }
 
 .actionButton {

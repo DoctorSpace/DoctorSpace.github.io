@@ -9,49 +9,64 @@ const ContactPage = () => {
     <div>
       <HeaderZero />
       <HorizontalRule />
-      <div className={styles.section}>
+      <main className={styles.section}>
         <div className={styles.card}>
-          <h2>Контакты</h2>
-          <div className={styles.text}>
-            <p>
-              Не стесняйтесь звонить нам, если у вас есть какие-либо вопросы,
-              нужна консультация или вы хотели бы узнать больше о наших товарах
-              и услугах в области восточных танцев.
+          <section className={styles.intro}>
+            <h1>
+              Давайте создадим ваш <span>особенный образ</span>
+            </h1>
+            <p className={styles.lead}>
+              Расскажите о костюме, выступлении или идее. Мы поможем подобрать
+              украшение, которое завершит образ.
             </p>
-            <p>Мы ценим вашу заинтересованность и ждем вашего сообщения</p>
-          </div>
+          </section>
 
-          <div className={styles.write}>
-            <p>Напиши нам</p>
-            <div itemScope className={styles.messengers}>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://wa.me/79614041462"
-              >
-                <img
-                  itemProp="image"
-                  src={Phone}
-                  className={styles.icon}
-                  alt="Phone"
-                />
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://www.instagram.com/isadora_visage/"
-              >
-                <img
-                  itemProp="image"
-                  src={PhotoCamera}
-                  className={styles.icon}
-                  alt="Photos"
-                />
-              </a>
+          <section itemScope className={styles.contacts}>
+            <div className={styles.contactsHeader}>
+              <p>Выберите удобный способ</p>
+              <h2>Напишите нам</h2>
             </div>
-          </div>
+
+            <a
+              itemProp="url"
+              target="_blank"
+              rel="noreferrer"
+              href="https://wa.me/79614041462"
+              className={styles.channel}
+            >
+              <span className={styles.iconBox}>
+                <img itemProp="image" src={Phone} alt="WhatsApp" />
+              </span>
+              <span className={styles.channelText}>
+                <strong>WhatsApp</strong>
+                <small>Написать сообщение</small>
+              </span>
+              <span className={styles.channelArrow} aria-hidden="true">
+                ↗
+              </span>
+            </a>
+
+            <a
+              itemProp="url"
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.instagram.com/isadora_visage/"
+              className={styles.channel}
+            >
+              <span className={styles.iconBox}>
+                <img itemProp="image" src={PhotoCamera} alt="Instagram" />
+              </span>
+              <span className={styles.channelText}>
+                <strong>Instagram</strong>
+                <small>@isadora_visage</small>
+              </span>
+              <span className={styles.channelArrow} aria-hidden="true">
+                ↗
+              </span>
+            </a>
+          </section>
         </div>
-      </div>
+      </main>
     </div>
   );
 };

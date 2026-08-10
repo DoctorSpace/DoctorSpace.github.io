@@ -2,10 +2,9 @@ export const CATEGORIES = [
   {
     title: "Изделия для головы",
     items: [
-      { id: "Tiadems", value: "Tiadems", label: "диадемы" },
-      { id: "Earrings", value: "Earrings", label: "серьги" },
+      { value: "Tiadems", label: "диадемы" },
+      { value: "Earrings", label: "серьги" },
       {
-        id: "HairAccessorys",
         value: "HairAccessorys",
         label: "Аксессуар для волос",
       },
@@ -14,18 +13,18 @@ export const CATEGORIES = [
   {
     title: "Украшения для тела",
     items: [
-      { id: "Necklaces", value: "Necklaces", label: "колье" },
-      { id: "Belts", value: "Belts", label: "пояса" },
-      { id: "Scarfs", value: "Scarfs", label: "платок" },
-      { id: "Chokers", value: "Chokers", label: "чокеры" },
+      { value: "Necklaces", label: "колье" },
+      { value: "Belts", label: "пояса" },
+      { value: "Scarfs", label: "платок" },
+      { value: "Chokers", label: "чокеры" },
     ],
   },
   {
     title: "Браслеты",
     items: [
-      { id: "SoftBracelets", value: "SoftBracelets", label: "мягкие" },
-      { id: "HardBracelets", value: "HardBracelets", label: "жесткие" },
-      { id: "FeltBracelets", value: "FeltBracelets", label: "фетровые" },
+      { value: "SoftBracelets", label: "мягкие" },
+      { value: "HardBracelets", label: "жесткие" },
+      { value: "FeltBracelets", label: "фетровые" },
     ],
   },
 ];

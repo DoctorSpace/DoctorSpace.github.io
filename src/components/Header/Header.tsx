@@ -56,7 +56,7 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <div className={styles.contacts}></div>
+      <div />
 
       <Link to="/" className={styles.logoLink}>
         <div className={styles.logo} id="LogoName">
@@ -82,13 +82,13 @@ const Header = () => {
         </div>
 
         <div
-          className={`${styles.nav} ${
+          className={
             isMobileLayout
               ? isMobileMenuOpen
                 ? styles.navOpen
                 : styles.navClosed
               : styles.navDesktop
-          }`}
+          }
         >
           <div className={styles.navWrapper}>
             <nav className={styles.navList}>
