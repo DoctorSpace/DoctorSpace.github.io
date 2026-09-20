@@ -40,7 +40,7 @@ const CONTEXTS: Record<string, ProductContext> = {
   HardBracelet: {
     title: "Жёсткий браслет",
     category: "HardBracelets",
-    count: 32,
+    count: 38,
   },
   Necklace: {
     title: "Колье",
