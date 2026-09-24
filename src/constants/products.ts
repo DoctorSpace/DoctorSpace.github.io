@@ -30,7 +30,7 @@ const CONTEXTS: Record<string, ProductContext> = {
   FeltBracelet: {
     title: "Фетровый браслет",
     category: "FeltBracelets",
-    count: 31,
+    count: 41,
   },
   HairAccessory: {
     title: "Аксессуар для волос",
@@ -45,7 +45,7 @@ const CONTEXTS: Record<string, ProductContext> = {
   Necklace: {
     title: "Колье",
     category: "Necklaces",
-    count: 198,
+    count: 244,
   },
   Scarf: {
     title: "Платок",
